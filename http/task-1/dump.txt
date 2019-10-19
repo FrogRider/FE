@@ -1,0 +1,34 @@
+GET /wireshark-labs/HTTP-wireshark-file4.html HTTP/1.1
+Host: gaia.cs.umass.edu
+Connection: keep-alive
+DNT: 1
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uk;q=0.6
+If-None-Match: "2ca-5953d25d1970b"
+If-Modified-Since: Sat, 19 Oct 2019 05:59:03 GMT
+
+__________
+
+
+HTTP/1.1 304 Not Modified
+Date: Sat, 19 Oct 2019 09:03:41 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3
+Connection: Keep-Alive
+Keep-Alive: timeout=5, max=100
+ETag: "2ca-5953d25d1970b"
+
+__________
+
+Из данного дампа можно увидеть следующее:
+1) запрос GET /wireshark-labs/HTTP-wireshark-file4.html HTTP/1.1
+2) данный сайт хостится на gaia.cs.umass.edu
+3) тип соединения keep-alive
+4) какие типы файлов допустимы
+5) кодировка
+6) язык
+7) used with GET to make it conditional: if the requested document has not changed since the time specified the
+document will not be sent with Not Modified 304 reply
+8) параметры машины, на которой хостится сайт (Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP....)
