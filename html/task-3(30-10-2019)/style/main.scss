@@ -114,7 +114,6 @@ article {
       margin: 0 auto;
       border: 2px solid tomato;
       border-radius: 10px;
-      outline: none;
   }
 
   table, td, th {
@@ -126,8 +125,8 @@ article {
       margin: 0 auto;
   }
 
-  meter {
-      float: right
+  meter, td i {
+      float: right //не смог придумать как сделать это лучше
   }
 
   hr {

@@ -125,7 +125,6 @@ audio {
   margin: 0 auto;
   border: 2px solid tomato;
   border-radius: 10px;
-  outline: none;
 }
 
 table, td, th {
@@ -137,7 +136,7 @@ table {
   margin: 0 auto;
 }
 
-meter {
+meter, td i {
   float: right;
 }
 
