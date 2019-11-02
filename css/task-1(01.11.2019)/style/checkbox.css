@@ -1,0 +1,61 @@
+.ios_checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.ios_checkbox .check_label {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 3px;
+  background: #2ecc71;
+  border: 1px solid gray;
+  border-radius: 42.5px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.ios_checkbox .default_checkbox {
+  display: none;
+}
+
+.ios_checkbox .default_checkbox:checked + label {
+  background: #f1f1f1;
+}
+
+.ios_checkbox .default_checkbox:checked + label:before {
+  margin-left: -42px;
+}
+
+.check_label:before {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  content: '';
+  width: 41px;
+  height: 41px;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid gray;
+  -webkit-transform: translateX(93%);
+          transform: translateX(93%);
+  margin-left: 2px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}

@@ -1,0 +1,62 @@
+.bread_crumbs {
+    width: 100%;
+    background: #f1f1f1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    .bread_crumb {
+        background: $blue;
+        margin-left: 53px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px 1px;
+
+        a{
+            text-decoration: none;
+            color: #fff
+        }
+
+        &:last-of-type {
+            background: $darkBlue;
+            a {
+                color: rgb(255, 99, 71);
+            }
+        
+            &:before {
+                color: $darkBlue;
+                background: $darkBlue;
+            }
+        
+            &:after{
+                clip-path: none;
+                background: $darkBlue;
+                color: $darkBlue;
+            }
+        }
+
+        &:first-of-type:before {
+            clip-path: none;
+        }
+    }
+}
+
+.bread_crumb:after, .bread_crumb:before {
+    content:'.';
+    color: $blue;
+    background: $blue;
+    width: 10px;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    padding: 10px;
+    position: absolute;
+    margin-right: 10px;
+    transform: translateY(-25.6%);
+}
+
+.bread_crumb:before {
+    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%, 25% 50%);
+    margin-right: -10px;
+    margin-left: -30px;
+}
