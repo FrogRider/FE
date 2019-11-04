@@ -1,12 +1,15 @@
+$green : rgb(55, 125, 34);
+$gray : rgb(214, 214, 214); 
+
 .default_radio {
     visibility: hidden;
 
 &:checked +label:after {
-  background: green;
+  background: $green;
 }
 
 &:not(:checked) +label:after {
-  background: gray;
+  background: $gray;
 }
 }
 

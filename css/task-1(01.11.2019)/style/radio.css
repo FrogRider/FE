@@ -3,11 +3,11 @@
 }
 
 .default_radio:checked + label:after {
-  background: green;
+  background: #377d22;
 }
 
 .default_radio:not(:checked) + label:after {
-  background: gray;
+  background: #d6d6d6;
 }
 
 .label {

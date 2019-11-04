@@ -21,7 +21,7 @@ nav  {
     
     li {
         list-style-type: none;
-        margin:  10px;
+        margin:  10px 12px;
         padding: 5px;
         width: 150px;
         text-align: center;
@@ -57,9 +57,11 @@ article {
     font-size: 1.2em;
   }
   
-  h2 {
+  h2 mark{
+    display: block;
     text-align: center;
-    color: tomato
+    color: tomato;
+    background: none;
   }
   
   .block {
@@ -102,7 +104,7 @@ article {
       }
   }
 
-  bdi p{
+  p bdi{
       display: inline;
       border: 2px solid tomato;
       border-radius: 10px;
