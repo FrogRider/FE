@@ -1,0 +1,27 @@
+@media screen and (max-width: 830px) {
+    .header_info {
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .phone, .mail {
+            width: 100%;
+        }
+    }
+
+    .galery .galery_part {
+        width: calc((100%/2) - 4%);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .galery .galery_part {
+        width: calc((100%) - 4%);
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .slider, .slider_name {
+        // display: none;
+    }
+}

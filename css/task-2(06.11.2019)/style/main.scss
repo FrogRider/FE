@@ -1,0 +1,42 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../font/Montserrat-Medium.ttf);
+  }
+@import '_colors.scss';
+@import '_header.scss';
+@import '_nav.scss';
+@import '_galery.scss';
+@import '_slider.scss';
+@import '_footer.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+html {
+    width: 100%;
+}
+
+.wraper {
+    width: 90vw;
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+picture img {
+    width: 100%;
+    margin-top: 30px;
+}
+
+h1 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+
+@import '_media_q.scss';
+
