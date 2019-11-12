@@ -1,5 +1,9 @@
 @import '_colors';
 
+.mobile_menu_btn {
+    display: none;
+}
+
 .menu{
     width: 100%;
     display: flex;
@@ -11,7 +15,7 @@
 nav {
     position: sticky;
     top: 0em;
-    z-index: 999;
+    z-index: 9;
 }
 
 .nav_elem {
@@ -62,7 +66,7 @@ nav {
     }
 }
 
-.sub_menu li ul {
+.sub_menu li ul, .sub_menu li ul li .sub_menu_lvl2{
     position: absolute;
     left: 100%;
     top: 0;
@@ -70,6 +74,8 @@ nav {
     display: none;
 }
 
-.sub_menu li:hover ul {
+.sub_menu li:hover ul,
+.subMenu li ul, .sub_menu li ul li:hover .sub_menu_lvl2 {
     display: block;
 }
+

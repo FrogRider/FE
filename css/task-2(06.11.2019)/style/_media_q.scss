@@ -11,17 +11,27 @@
     .galery .galery_part {
         width: calc((100%/2) - 4%);
     }
+
+    .wraper {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 550px) {
     .galery .galery_part {
-        width: calc((100%) - 4%);
+        width: 100%;
         margin-top: 50px;
-    }
-}
 
-@media screen and (max-width: 900px) {
-    .slider, .slider_name {
-        // display: none;
+        & a {
+            width: 100%;
+        }
+    }
+
+    footer .socials {
+        flex-direction: column;
+    }
+
+    .input {
+        width: 100%;
     }
 }

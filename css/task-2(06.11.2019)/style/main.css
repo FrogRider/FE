@@ -62,6 +62,10 @@ header .header_info div {
           align-items: center;
 }
 
+.mobile_menu_btn {
+  display: none;
+}
+
 .menu {
   width: 100%;
   display: -webkit-box;
@@ -78,7 +82,7 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0em;
-  z-index: 999;
+  z-index: 9;
 }
 
 .nav_elem {
@@ -130,7 +134,7 @@ nav {
   color: #fff;
 }
 
-.sub_menu li ul {
+.sub_menu li ul, .sub_menu li ul li .sub_menu_lvl2 {
   position: absolute;
   left: 100%;
   top: 0;
@@ -138,7 +142,8 @@ nav {
   display: none;
 }
 
-.sub_menu li:hover ul {
+.sub_menu li:hover ul,
+.subMenu li ul, .sub_menu li ul li:hover .sub_menu_lvl2 {
   display: block;
 }
 
@@ -210,6 +215,9 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -217,8 +225,7 @@ h3 {
 }
 
 .slider {
-  width: 800px;
-  height: 600px;
+  max-width: 900px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
@@ -227,6 +234,7 @@ h3 {
 .slider input[type="radio"] {
   position: absolute;
   opacity: 0;
+  bottom: 0;
 }
 
 .slider_nav {
@@ -273,7 +281,7 @@ h3 {
 
 .slides .slide img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 #r1:checked ~ .slides {
@@ -310,11 +318,64 @@ h3 {
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   bottom: -10%;
+  left: 0;
   background: #34495e;
   width: 100%;
-  padding: 20px;
+  color: #fff;
+}
+
+footer div {
+  padding: 20px 0;
+}
+
+footer .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #fff;
+}
+
+footer .socials i img {
+  height: 1.5em;
+  padding-right: 2em;
+}
+
+footer .copywrite {
+  padding-left: 2em;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: 2px solid #1f1f1f;
+}
+
+form {
+  width: 60%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,7 +385,41 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 20px;
+}
+
+.input_btn {
+  background: #1abc9c;
   color: #fff;
+  border: none;
+  width: 50%;
+}
+
+.input_btn:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 830px) {
+  .mobile_menu_btn {
+    display: block;
+  }
+  .mobile_menu_btn i img.mobile_menu_img {
+    height: 2em;
+  }
+  .mobile_menu_btn:hover ~ .menu {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+  nav {
+    width: 100%;
+    background: #34495e;
+  }
 }
 
 * {
@@ -342,6 +437,8 @@ html {
   max-width: 960px;
   margin: 0 auto;
   position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 picture img {
@@ -372,11 +469,26 @@ h1 {
   .galery .galery_part {
     width: calc((100%/2) - 4%);
   }
+  .wraper {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 550px) {
   .galery .galery_part {
-    width: calc((100%) - 4%);
+    width: 100%;
     margin-top: 50px;
+  }
+  .galery .galery_part a {
+    width: 100%;
+  }
+  footer .socials {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .input {
+    width: 100%;
   }
 }

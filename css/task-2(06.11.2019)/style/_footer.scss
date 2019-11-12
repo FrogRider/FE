@@ -1,11 +1,33 @@
 footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   bottom: -10%;
+  left: 0;
   background: $gray;
   width: 100%;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff
+  color: #fff;
+
+  & div {
+    padding: 20px 0;
+  }
+
+  & .socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    // width: 300px;
+    color: #fff;
+
+    & i img {
+      height: 1.5em;
+      padding-right: 2em;
+    }
+  }
+
+  & .copywrite {
+    padding-left: 2em;
+  }
 }
