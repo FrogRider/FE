@@ -1,0 +1,225 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../font/Montserrat-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+.box {
+  width: 500px;
+  height: 750px;
+  background: tomato;
+  margin: 0 auto;
+  border-radius: 35px;
+  -webkit-box-shadow: -5px 5px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: -5px 5px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.top, .bottom {
+  width: 100%;
+  height: 50%;
+}
+
+.bottom {
+  background: #fff;
+}
+
+.container {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  position: relative;
+}
+
+.container .name {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2em;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .name .new {
+  position: absolute;
+  display: inline-block;
+  top: -15px;
+  right: 70px;
+  display: inline-block;
+  background: #6de470;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.container.collection {
+  color: black;
+  text-transform: uppercase;
+}
+
+.container .stars {
+  padding: 10px 0;
+}
+
+.container .stars i.inactive {
+  color: #ccc;
+}
+
+.container .stars .fa-star:hover {
+  cursor: pointer;
+}
+
+.container .size {
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.container .sizes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 20px 0;
+}
+
+.container .sizes input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.container .sizes label {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.container .sizes #r1:checked ~ #l1 {
+  background: tomato;
+  color: #fff;
+}
+
+.container .sizes #r2:checked ~ #l2 {
+  background: tomato;
+  color: #fff;
+}
+
+.container .sizes #r3:checked ~ #l3 {
+  background: tomato;
+  color: #fff;
+}
+
+.container .sizes #r4:checked ~ #l4 {
+  background: tomato;
+  color: #fff;
+}
+
+.container .sizes #r5:checked ~ #l5 {
+  background: tomato;
+  color: #fff;
+}
+
+.container .colour {
+  text-transform: uppercase;
+}
+
+.bottom {
+  border-radius: 0 0 35px 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  background: #912f2f;
+  background: linear-gradient(344deg, #912f2f 0%, #eb7e43 100%);
+  border-radius: 35px 35px 0 0;
+  color: #fff;
+}
+
+.top .shoe {
+  position: absolute;
+  width: 450px;
+  height: auto;
+  right: -42%;
+  top: 10%;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  z-index: 8;
+  -webkit-filter: drop-shadow(-5px 5px 6px rgba(0, 0, 0, 0.4));
+          filter: drop-shadow(-5px 5px 6px rgba(0, 0, 0, 0.4));
+}
+
+.top .logo {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  top: 10px;
+  left: 30px;
+}
+
+.top .name {
+  text-transform: uppercase;
+  padding-top: 100px;
+  padding-left: 20px;
+  font-size: 1.2em;
+}
+
+.top .text {
+  padding-top: 20px;
+  padding-left: 20px;
+  width: 60%;
+}
+
+.top .fast {
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+  width: 100%;
+  height: 45%;
+  text-transform: uppercase;
+  padding-top: 20px;
+  color: #000;
+  opacity: 0.1;
+  font-size: 9.5em;
+  text-align: center;
+  letter-spacing: 30px;
+}
