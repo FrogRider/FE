@@ -1,0 +1,59 @@
+nav {
+  background: $darker;
+  color: $light;
+  border-bottom: 2px solid $contrast;
+  h2 {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0;
+
+    &:after, &:before {
+      content: '↓';
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  & ul {
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+nav:hover ul {
+  height: 100%;
+  display: block;
+  animation: fadeIn 1s;
+
+  & h2 {
+    color: $contrast;
+  }
+}
+
+nav ul li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: calc((100%/3) - 6px);
+  padding: 10px 0;
+  text-align: center;
+
+  & a {
+    text-decoration: none;
+    color: $light;
+
+    &:hover {
+      color: $contrast
+    }
+  }
+
+  &:nth-child(odd) {
+    background: $dark;
+  }
+
+  &:nth-child(even) {
+    background: $darker;
+  }
+}

@@ -1,0 +1,65 @@
+footer, article, header {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1440px;
+  background: #ccc;
+}
+
+h2 {
+  text-align: center;
+}
+
+h1 {
+  visibility: hidden;
+  position: absolute;
+}
+
+article {
+  background: $dark;
+  color: $light;
+   & a{ 
+     color: $light;
+
+     &:hover {
+       color: $contrast
+     }
+   }
+}
+
+header {
+  background: $darker;
+  border-radius: 0 0 10px 10px;
+
+  & p{
+    padding: 10px 20px;
+    text-align: justify;
+    font-size: 1.2em;
+  }
+
+  & h2 {
+    padding: 10px 0;
+  }
+}
+
+ol li {
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  list-style-type: none;
+  border-bottom: 2px dashed $darker;
+  padding: 10px 0;
+  font-size: 1.5em;
+
+  &::first-letter{
+    color: $contrast;
+  }
+}
+
+section p {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+
