@@ -146,8 +146,68 @@ body {
   color: #fff;
 }
 
-.container .colour {
+.container .color {
   text-transform: uppercase;
+}
+
+.container .colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .colors input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.container .colors .outer {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+}
+
+.container .colors .outer .inner {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: #000;
+  border-radius: inherit;
+}
+
+.container .colors .outer .red {
+  background: tomato;
+}
+
+.container .colors .outer .green {
+  background: #6de470;
+}
+
+.container .colors .outer .yellow {
+  background: orange;
+}
+
+.container .colors #color_r1:checked ~ #color_l1 {
+  border: 2px solid tomato;
+}
+
+.container .colors #color_r2:checked ~ #color_l2 {
+  border: 2px solid #6de470;
+}
+
+.container .colors #color_r3:checked ~ #color_l3 {
+  border: 2px solid orange;
 }
 
 .bottom {
@@ -186,6 +246,12 @@ body {
   z-index: 8;
   -webkit-filter: drop-shadow(-5px 5px 6px rgba(0, 0, 0, 0.4));
           filter: drop-shadow(-5px 5px 6px rgba(0, 0, 0, 0.4));
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+}
+
+.top:hover .shoe {
+  opacity: 0.5;
 }
 
 .top .logo {
@@ -206,7 +272,7 @@ body {
 .top .text {
   padding-top: 20px;
   padding-left: 20px;
-  width: 60%;
+  width: 70%;
 }
 
 .top .fast {

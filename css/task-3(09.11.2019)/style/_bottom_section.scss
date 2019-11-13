@@ -1,3 +1,5 @@
+$green: #6de470;
+
 .container {
   width: calc(100% - 40px);
   height: calc(100% - 40px);
@@ -17,7 +19,7 @@
       top: -15px;
       right: 70px;
       display: inline-block;
-      background: #6de470;
+      background: $green;
       padding: 5px;
       border-radius: 5px;
       color: #fff;
@@ -88,8 +90,56 @@
     }
   }
 
-  & .colour {
+  & .color {
     text-transform: uppercase;
+  }
+
+  & .colors {
+    & input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+    }
+
+    display: flex;
+
+    & .outer {
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+
+      & .inner {
+        display: block;
+        height: 20px;
+        width: 20px;
+        background: #000;
+        border-radius: inherit;
+      }
+
+      .red {
+        background: tomato;
+      }
+      .green {
+        background: $green;
+      }
+      .yellow {
+        background: orange;
+      }
+    }
+
+    #color_r1:checked ~ #color_l1 {
+      border: 2px solid tomato;
+    }
+    #color_r2:checked ~ #color_l2 {
+      border: 2px solid $green;
+    }
+    #color_r3:checked ~ #color_l3 {
+      border: 2px solid orange;
+    }
   }
 }
 
