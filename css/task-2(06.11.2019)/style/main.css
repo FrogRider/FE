@@ -410,7 +410,10 @@ form {
   .mobile_menu_btn i img.mobile_menu_img {
     height: 2em;
   }
-  .mobile_menu_btn:hover ~ .menu {
+  nav:hover .menu {
+    display: block;
+  }
+  .nav_elem:hover .sub_menu {
     display: block;
   }
   .menu {

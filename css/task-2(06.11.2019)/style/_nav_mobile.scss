@@ -7,11 +7,16 @@
       height: 2em;
     }
 
-    &:hover ~ .menu {
-      display: block;
-    }
+    // &:hover ~ .menu {
+    //   display: block;
+    // }
   }
-
+  nav:hover .menu {
+    display: block;
+  }
+  .nav_elem:hover .sub_menu{
+    display: block;
+  }
   .menu {
     display: none;
   }
