@@ -154,6 +154,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 20px 0;
 }
 
 .container .colors input[type="radio"] {
@@ -208,6 +209,21 @@ body {
 
 .container .colors #color_r3:checked ~ #color_l3 {
   border: 2px solid orange;
+}
+
+.container .colors .price {
+  position: absolute;
+  background: #6de470;
+  color: #fff;
+  right: -10%;
+  bottom: 19%;
+  font-size: 2.5em;
+  padding: 0 20px;
+  border-radius: 10px;
+}
+
+.container .colors .price span {
+  font-weight: bold;
 }
 
 .bottom {
