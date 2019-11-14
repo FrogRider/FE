@@ -3,6 +3,11 @@
   src: url(../font/Montserrat-Medium.ttf);
 }
 
+@font-face {
+  font-family: MontserratLight;
+  src: url(../font/Montserrat-Light.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -55,13 +60,14 @@ body {
 }
 
 .container .name .new {
+  font-family: MontserratLight;
   position: absolute;
   display: inline-block;
   top: -15px;
   right: 70px;
   display: inline-block;
   background: #6de470;
-  padding: 5px;
+  padding: 0 5px;
   border-radius: 5px;
   color: #fff;
 }
@@ -214,6 +220,7 @@ body {
 .container .colors .price {
   position: absolute;
   background: #6de470;
+  font-family: MontserratLight;
   color: #fff;
   right: -10%;
   bottom: 19%;
@@ -226,6 +233,7 @@ body {
 
 .container .colors .price span {
   font-weight: bold;
+  font-family: Montserrat;
 }
 
 .bottom {

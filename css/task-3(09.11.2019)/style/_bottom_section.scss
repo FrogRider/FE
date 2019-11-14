@@ -14,13 +14,14 @@ $green: #6de470;
     align-items: center;
 
     & .new {
+      font-family: MontserratLight;
       position: absolute;
       display: inline-block;
       top: -15px;
       right: 70px;
       display: inline-block;
       background: $green;
-      padding: 5px;
+      padding: 0 5px;
       border-radius: 5px;
       color: #fff;
     }
@@ -145,6 +146,7 @@ $green: #6de470;
     .price {
       position: absolute;
       background: $green;
+      font-family: MontserratLight;
       color: #fff;
       right: -10%;
       bottom: 19%;
@@ -155,6 +157,7 @@ $green: #6de470;
 
       & span {
         font-weight: bold;
+        font-family: Montserrat;
       }
     }
   }
