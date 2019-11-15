@@ -1,0 +1,17 @@
+@import '_colors';
+@import '_main';
+@import '_disignes';
+@import '_footer';
+@import '_media_q';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $light;
+  height: 100vh;
+}
+
