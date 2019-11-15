@@ -1,0 +1,77 @@
+html {
+  height: 100vh !important;
+}
+
+.hide {
+  transform: translateX(-100%);
+}
+
+body {
+  height: 100%;
+  background: $darkBlue;
+  position: relative;
+}
+
+header h1 {
+  position: absolute;
+  display: none;
+}
+
+section, footer, header h2, header p {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1440px;
+  color: $light
+}
+
+header h2 {
+  padding-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+a{
+  color: $light;
+  transition: color 0.3s linear;
+
+  &:hover {
+    color: $contrast; 
+  }
+}
+
+p, header p, section p {
+  font-size: 1.2em;
+  border-bottom: 2px dashed rgb(20, 35, 59);
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+
+  // &:last-of-type {
+  //   border-bottom: none
+  // }
+}
+
+section:last-of-type p{
+  border-bottom: none;
+}
+
+ol li {
+  list-style-type: none;
+  font-size: 1.2em;
+  text-align: left;
+  text-align: justify;
+  padding-bottom: 5px;
+
+  &::first-letter {
+    color: $contrast
+  }
+
+  &:not(::first-line){
+    padding-left: 100px;
+  }
+}
+
+section h2 {
+  text-align: center;
+}
+
