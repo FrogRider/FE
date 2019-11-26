@@ -1,0 +1,2 @@
+1) text-overflow для блока с текстом в ОДНУ СТРОКУ
+2) transform: translate для центрирования блока

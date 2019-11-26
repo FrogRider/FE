@@ -1,0 +1,42 @@
+$item-bg: rgba(29, 36, 129, 0.6);
+
+$item-1x1_size:100%;
+$item-2x2_size:calc(200% + 2px);
+
+$item-1x3_height: calc(300% + 4px);
+$item-1x3_width: 100%;
+
+
+.left .grid {
+
+  & .belt::after, 
+  & .box::after, 
+  & .fire::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 97%;
+    z-index: 5;
+  }
+
+  & .belt::after {  
+    width: $item-1x1_size;
+    height: $item-1x1_size;
+    background:  $item-bg url('../img/belt.png') no-repeat center;
+    background-size: 97%;
+  }
+
+  & .box::after {
+    width: $item-2x2_size;
+    height: $item-2x2_size;
+    background:  $item-bg url('../img/cube.png') no-repeat center;
+  }
+
+  & .fire::after {
+    width: $item-1x3_width;
+    height: $item-1x3_height; 
+    background:  $item-bg url('../img/fire.png') no-repeat center;
+  }
+
+}

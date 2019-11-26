@@ -1,0 +1,46 @@
+.item-stats {
+  position: absolute;
+  display: none;
+  width: 200px;
+  top: 26px;
+  background: rgba(0, 0, 0, 0.555);
+  z-index: 10;
+  font-size: 12px;
+
+  & p{
+    text-align: center;
+    color: #fff;
+    padding: 2px 0;
+
+    &.stat {
+      color: rgb(109, 93, 255)
+    }
+
+    &.descr {
+      color: rgb(238, 230, 186)
+    }
+  }
+}
+
+.left .grid {
+  & .box .item-stats {
+    top: 52px;
+  }
+  
+  & .fire .item-stats {
+    top: 78px;
+  }
+  
+  & .belt:hover .item-stats, 
+  & .box:hover .item-stats, 
+  & .fire:hover .item-stats{
+    display: inline-block;
+  }
+}
+
+
+/* aligning description for 2-wide item */
+.box .item-stats {
+  right: 0;
+  transform: translateX(50%);
+}
