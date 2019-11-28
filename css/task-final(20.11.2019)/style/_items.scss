@@ -1,6 +1,10 @@
-$item-bg: rgba(29, 36, 129, 0.6);
+$item-bg: rgba(24, 29, 105, 0.6);
 
 $item-1x1_size:100%;
+
+$item-1x2_height: calc(200% + 2px);
+$item-1x2_width: 100%;
+
 $item-2x2_size:calc(200% + 2px);
 
 $item-1x3_height: calc(300% + 4px);
@@ -11,7 +15,8 @@ $item-1x3_width: 100%;
 
   & .belt::after, 
   & .box::after, 
-  & .fire::after {
+  & .fire::after, 
+  & .book::after {
     content: '';
     position: absolute;
     top: 0;
@@ -37,6 +42,12 @@ $item-1x3_width: 100%;
     width: $item-1x3_width;
     height: $item-1x3_height; 
     background:  $item-bg url('../img/fire.png') no-repeat center;
+  }
+
+  & .book::after {
+    width: $item-1x2_width;
+    height: $item-1x2_height; 
+    background:  $item-bg url('../img/blue-book.png') no-repeat center;
   }
 
 }

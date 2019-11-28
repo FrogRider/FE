@@ -23,7 +23,8 @@
 }
 
 .left .grid {
-  & .box .item-stats {
+  & .box .item-stats,
+  & .book .item-stats {
     top: 52px;
   }
   
@@ -33,7 +34,8 @@
   
   & .belt:hover .item-stats, 
   & .box:hover .item-stats, 
-  & .fire:hover .item-stats{
+  & .fire:hover .item-stats,
+  & .book:hover .item-stats{
     display: inline-block;
   }
 }

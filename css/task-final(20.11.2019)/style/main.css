@@ -76,11 +76,10 @@ body {
 
 .left .grid {
   width: 282px;
-  height: 272px;
+  height: 277px;
   background-color: #000;
   margin-left: 3.5px;
   margin-top: 79px;
-  /* TODO: remove when inputs came in */
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[10];
@@ -120,6 +119,42 @@ body {
   cursor: pointer;
 }
 
+.left .inputs {
+  height: 42px;
+  width: 170px;
+  position: absolute;
+  top: 25px;
+}
+
+.left .inputs .gold input,
+.left .inputs .max input {
+  height: 50%;
+  width: 100%;
+  padding: 5px 0;
+  background: none;
+  border: none;
+  -webkit-box-shadow: inset 0px 0px 0px 2px #fff;
+          box-shadow: inset 0px 0px 0px 2px #fff;
+  outline: none;
+  text-align: center;
+  color: #fff;
+}
+
+.left .inputs .btn {
+  position: absolute;
+  left: 0;
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/money.png");
+  background-size: contain;
+  cursor: pointer;
+}
+
+.left .inputs .gold input {
+  width: calc(100% - 21px);
+  float: right;
+}
+
 .right {
   background-image: url("../img/bg_item-right.png");
   background-size: contain;
@@ -127,7 +162,8 @@ body {
 
 .left .grid .belt::after,
 .left .grid .box::after,
-.left .grid .fire::after {
+.left .grid .fire::after,
+.left .grid .book::after {
   content: '';
   position: absolute;
   top: 0;
@@ -139,20 +175,26 @@ body {
 .left .grid .belt::after {
   width: 100%;
   height: 100%;
-  background: rgba(29, 36, 129, 0.6) url("../img/belt.png") no-repeat center;
+  background: rgba(24, 29, 105, 0.6) url("../img/belt.png") no-repeat center;
   background-size: 97%;
 }
 
 .left .grid .box::after {
   width: calc(200% + 2px);
   height: calc(200% + 2px);
-  background: rgba(29, 36, 129, 0.6) url("../img/cube.png") no-repeat center;
+  background: rgba(24, 29, 105, 0.6) url("../img/cube.png") no-repeat center;
 }
 
 .left .grid .fire::after {
   width: 100%;
   height: calc(300% + 4px);
-  background: rgba(29, 36, 129, 0.6) url("../img/fire.png") no-repeat center;
+  background: rgba(24, 29, 105, 0.6) url("../img/fire.png") no-repeat center;
+}
+
+.left .grid .book::after {
+  width: 100%;
+  height: calc(200% + 2px);
+  background: rgba(24, 29, 105, 0.6) url("../img/blue-book.png") no-repeat center;
 }
 
 .item-stats {
@@ -179,7 +221,8 @@ body {
   color: #eee6ba;
 }
 
-.left .grid .box .item-stats {
+.left .grid .box .item-stats,
+.left .grid .book .item-stats {
   top: 52px;
 }
 
@@ -189,7 +232,8 @@ body {
 
 .left .grid .belt:hover .item-stats,
 .left .grid .box:hover .item-stats,
-.left .grid .fire:hover .item-stats {
+.left .grid .fire:hover .item-stats,
+.left .grid .book:hover .item-stats {
   display: inline-block;
 }
 
