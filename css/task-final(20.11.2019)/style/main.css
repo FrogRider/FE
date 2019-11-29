@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Carrois+Gothic&display=swap");
+@font-face {
+  font-family: Diablo;
+  src: url(../font/diablo_l.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Carrois Gothic', sans-serif;
+  font-family: 'Diablo';
 }
 
 html {
@@ -40,7 +44,6 @@ body {
   left: 73px;
   width: 620px;
   height: 409px;
-  background: red;
   background-image: url("../img/bg.png");
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,7 +89,6 @@ body {
       grid-template-rows: repeat(10, 1fr);
   -ms-grid-columns: (1fr)[10];
       grid-template-columns: repeat(10, 1fr);
-  grid-gap: 2px;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
   -webkit-box-pack: justify;
@@ -105,7 +107,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  background-image: url("../img/bg.png");
+  background-image: url("../img/tile.png");
+  background-size: 100%;
 }
 
 .left .cancel {
@@ -127,7 +130,7 @@ body {
 }
 
 .left .inputs .gold input,
-.left .inputs .max input {
+.left .inputs .max {
   height: 50%;
   width: 100%;
   padding: 5px 0;
@@ -138,6 +141,22 @@ body {
   outline: none;
   text-align: center;
   color: #fff;
+}
+
+.left .inputs .max {
+  position: absolute;
+  bottom: 0;
+  padding: 0;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .left .inputs .btn {
@@ -158,6 +177,224 @@ body {
 .right {
   background-image: url("../img/bg_item-right.png");
   background-size: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.right .right_top,
+.right .right_bottom {
+  width: 281px;
+  margin: 0 auto;
+  height: 50%;
+  margin-top: -50px;
+}
+
+.right .right_top {
+  width: 282px;
+  display: -ms-grid;
+  display: grid;
+  margin-top: -110px;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 7px;
+  height: 44%;
+}
+
+.right .right_top .col1, .right .right_top .col2, .right .right_top .col3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+}
+
+.right .right_top .left_gloves, .right .right_top .right_shoes {
+  width: 100%;
+  height: 62.25px;
+  background: url("../img/gloves_in_box.png") no-repeat center;
+  background-size: 67px 65px;
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+}
+
+.right .right_top .right_shoes {
+  background: url("../img/shoes_in_box.png") no-repeat center;
+  background-size: 67px 65px;
+}
+
+.right .right_top .left_weapon_first,
+.right .right_top .left_weapon_second,
+.right .right_top .right_weapon_first,
+.right .right_top .right_weapon_second {
+  background: url("../img/stick_weapon.png") no-repeat center;
+  background-size: 67px 95px;
+  width: 100%;
+  height: 53%;
+  position: absolute;
+  top: 22px;
+}
+
+.right .right_top .left_weapon_first i,
+.right .right_top .left_weapon_second i,
+.right .right_top .right_weapon_first i,
+.right .right_top .right_weapon_second i {
+  position: absolute;
+  background: #000;
+  width: 33px;
+  height: 20px;
+  bottom: 100%;
+  background: url("../img/selector_first.png");
+  background-size: cover;
+}
+
+.right .right_top .left_weapon_first i.second,
+.right .right_top .left_weapon_second i.second,
+.right .right_top .right_weapon_first i.second,
+.right .right_top .right_weapon_second i.second {
+  right: 0;
+  background: url("../img/selector_second.png");
+  background-size: cover;
+}
+
+.right .right_top .weapon.disabled:before {
+  content: '';
+  background: red;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+  position: absolute;
+  top: 0;
+}
+
+.right .right_top .bottom_section {
+  width: 100%;
+  height: 37px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right .right_top .bottom_section .ring_first,
+.right .right_top .bottom_section .ring_second {
+  height: 90%;
+  width: 33.3px;
+  background: #000;
+  background: url("../img/blue_ring_in_box.png");
+  background-size: cover;
+}
+
+.right .right_top .bottom_section .belt {
+  height: 90%;
+  width: 60px;
+  background: url("../img/belt_in_box.png");
+  background-size: cover;
+}
+
+.right .right_top .helmet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 61px;
+  height: 61px;
+  background: url("../img/crown.png");
+  background-size: cover;
+}
+
+.right .right_top .helmet:before {
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  background: url("../img/triangle.png");
+  background-size: cover;
+}
+
+.right .right_top .helmet .necklace {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translateX(115%);
+          transform: translateX(115%);
+  background: url("../img/necklace.png");
+  background-size: cover;
+}
+
+.right .right_top .armor {
+  width: 61px;
+  height: 45%;
+  position: absolute;
+  top: 61px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url("../img/armor2.png");
+  background-size: cover;
+}
+
+.right .right_bottom {
+  height: 41.5%;
+}
+
+.right .right_bottom #right_grid {
+  width: 100%;
+  height: 100%;
+  margin-top: 18%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #000;
+}
+
+.right .right_bottom #right_grid .grid-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-image: url("../img/tile.png");
+  background-size: 100%;
 }
 
 .left .grid .belt::after,
