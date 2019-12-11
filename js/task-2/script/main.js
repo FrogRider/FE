@@ -9,7 +9,7 @@ let attemptsCounter = 0;
 let range = [1, 100];
 
 const setup = () => {
-  num = Math.round(Math.random() * 100)ж
+  num = Math.round(Math.random() * 100);
   start.style.display = 'none';
   guess.style.display = 'block';
   input.style.pointerEvents = 'initial';
