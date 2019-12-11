@@ -52,10 +52,6 @@
 // guess.addEventListener('click', () => guesser());
 
 class Guesser {
-  constructor () {
-    autoBind(this);
-  }
-
   guess = document.getElementById('guess');
   input = document.getElementById('input');
   start = document.getElementById('start');
