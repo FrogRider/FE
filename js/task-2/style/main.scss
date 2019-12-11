@@ -2,23 +2,31 @@
     font-family: Montserrat;
     src: url(../font/Montserrat-Medium.ttf);
   }
-
-* {
+  
+  * {
     margin: 0;
     padding: 0;
     font-family: Montserrat;
-}
-
-body {
+  }
+  
+  body, html {
+    height: 100%;
+  }
+  
+  body {
     background-color: #f1f1f1;
-    color: tomato;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-      color: #000
-    }
+    color: tomato
   }
+
+  #guess {
+    display: none;
+  }
+
+  #input {
+    pointer-events: none;
+  }
+  
