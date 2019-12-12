@@ -71,7 +71,7 @@ class Guesser {
   displayRange = () => (this.rangeField.innerHTML = `[${this.range[0]} , ${this.range[1]}]`); 
 
   setup = () => {
-    this.num = Math.round(Math.random() * 100);
+    this.num = Math.round(Math.random() * this.range[1]);
     this.start.style.display = 'none';
     this.guess.style.display = 'block';
     this.input.style.pointerEvents = 'initial';
