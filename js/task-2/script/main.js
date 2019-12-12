@@ -52,22 +52,31 @@
 // guess.addEventListener('click', () => guesser());
 
 class Guesser {
+
+  constructor() {
+    this.attemptsCounter = 0;
+    this.range = [0, 100];
+  }
   guess = document.getElementById('guess');
   input = document.getElementById('input');
   start = document.getElementById('start');
   rangeField = document.getElementById('range');
-  attemptsCounter = 0;
-  range = [1, 100];
 
-  displayRange = () => (this.rangeField.innerHTML = `[${this.range[0]} , ${this.range[1]}]`);
+  setRange = r => {
+    Array.isArray(r) ? this.range = r : console.error(`setRange type error. Received ${typeof r} instead of array`);
+  } //setter
+
+  getAttemptsCounter = () => this.attemptsCounter; 
+
+  displayRange = () => (this.rangeField.innerHTML = `[${this.range[0]} , ${this.range[1]}]`); 
 
   setup = () => {
     this.num = Math.round(Math.random() * 100);
-    console.log(this.num);
     this.start.style.display = 'none';
     this.guess.style.display = 'block';
     this.input.style.pointerEvents = 'initial';
     this.rangeField.innerHTML = 'Try to guess';
+    console.log(this.num)
   };
 
   endGame = () => {
@@ -75,6 +84,7 @@ class Guesser {
     this.guess.style.display = 'none';
     this.input.style.pointerEvents = 'none';
     this.input.value = '';
+    this.rangeField.innerHTML = 'Try to guess';
   };
 
   guesser = () => {
@@ -92,7 +102,7 @@ class Guesser {
         alert('Загаданное число больше');
       }
       if (val == this.num) {
-        alert(`Вы угадали число. Количество попыток: ${this.attemptsCounter}`);
+        alert(`Вы угадали число. Количество попыток: ${this.getAttemptsCounter()}`);
         this.endGame();
       }
     } else {
@@ -104,5 +114,7 @@ class Guesser {
 }
 
 let g =new Guesser;
+g.setRange([1,150]);
+g.setRange(10);
 start.addEventListener('click', () => g.setup());
 guess.addEventListener('click', () => g.guesser());
