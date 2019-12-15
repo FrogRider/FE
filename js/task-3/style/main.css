@@ -15,8 +15,29 @@ body, html {
 
 body {
   background-color: #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: tomato
+
+      -ms-flex-direction: column;
+          flex-direction: column;
+
+          justify-content: center;
+
+          align-items: center;
+  color: tomato;
+}
+
+#guess {
+  display: none;
+}
+
+#input {
+  pointer-events: none;
+}
+
+input {
+ height: 20px;
+  width: 30%;
+  text-align: center;
 }

@@ -50,9 +50,9 @@
 
 // start.addEventListener('click', () => setup());
 // guess.addEventListener('click', () => guesser());
+//=============== version before class implementation ===============
 
 class Guesser {
-
   constructor() {
     this.attemptsCounter = 0;
     this.range = [0, 100];
@@ -63,12 +63,17 @@ class Guesser {
   rangeField = document.getElementById('range');
 
   setRange = r => {
-    Array.isArray(r) ? this.range = r : console.error(`setRange type error. Received ${typeof r} instead of array`);
-  } //setter
+    Array.isArray(r)
+      ? (this.range = r)
+      : console.error(
+          `setRange type error. Received ${typeof r} instead of array`
+        );
+  }; //setter
 
-  getAttemptsCounter = () => this.attemptsCounter; 
+  getAttemptsCounter = () => this.attemptsCounter;
 
-  displayRange = () => (this.rangeField.innerHTML = `[${this.range[0]} , ${this.range[1]}]`); 
+  displayRange = () =>
+    (this.rangeField.innerHTML = `[${this.range[0]} , ${this.range[1]}]`);
 
   setup = () => {
     this.num = Math.round(Math.random() * this.range[1]);
@@ -76,7 +81,7 @@ class Guesser {
     this.guess.style.display = 'block';
     this.input.style.pointerEvents = 'initial';
     this.rangeField.innerHTML = 'Try to guess';
-    console.log(this.num)
+    console.log(this.num);
   };
 
   endGame = () => {
@@ -94,15 +99,19 @@ class Guesser {
       if (val > this.num) {
         this.range[1] = +val;
         this.displayRange();
+        this.input.value = '';
         alert('Загаданное число меньше');
       }
       if (val < this.num) {
         this.range[0] = +val;
         this.displayRange();
+        this.input.value = '';
         alert('Загаданное число больше');
       }
       if (val == this.num) {
-        alert(`Вы угадали число. Количество попыток: ${this.getAttemptsCounter()}`);
+        alert(
+          `Вы угадали число. Количество попыток: ${this.getAttemptsCounter()}`
+        );
         this.endGame();
       }
     } else {
@@ -113,8 +122,8 @@ class Guesser {
   };
 }
 
-let g =new Guesser;
-g.setRange([1,150]);
+let g = new Guesser();
+g.setRange([1, 150]);
 g.setRange(10);
 start.addEventListener('click', () => g.setup());
 guess.addEventListener('click', () => g.guesser());
