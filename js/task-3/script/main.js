@@ -25,7 +25,7 @@ class Guesser {
     (this.rangeField.innerHTML = `[${this.range[0]} , ${this.range[1]}]`);
 
   setup = () => {
-    //TODO: check if playern typed number for ai to guess, then disable this input
+
     if (this.num_to_guess.value != '' ) {
       this.num_to_guess.style.pointerEvents = "none";
       this.num = Math.round(Math.random() * this.range[1]);
@@ -50,10 +50,13 @@ class Guesser {
     this.num_to_guess.value = '';
     this.attemptsCounter = 0;
     this.range = [0, 100];
+    alert(this.range);
+    console.log(this.range);
     this.ai_range = [0, 100];
   };
 
   ai = () => {
+    // debugger;
     let ai_guess = Math.round((this.ai_range[0] + this.ai_range[1])/2);
     // let ai_guess = Math.floor(this.ai_range[0] + Math.random() * (this.ai_range[1] + 1 - this.ai_range[0]));
     if (ai_guess == num_to_guess.value) {
@@ -66,12 +69,12 @@ class Guesser {
 
       this.box_for_nums.innerHTML += ` ${ai_guess}`
         
-      }
-      console.log(`ai says ${ai_guess}, [${this.ai_range[0]} , ${this.ai_range[1]}]`)
     }
+    console.log(`ai says ${ai_guess}, [${this.ai_range[0]} , ${this.ai_range[1]}]`)
+  }
 
   guesser = () => {
-    
+    console.log(this.range)
     let val = this.input.value;
     if (val !== '') {
       if (val >= this.range[0] && val <= this.range[1]) {
