@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>task-2</title>
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+
+<body>
+    <main class="wraper">
+
+        <header>
+            <div class="logo"><img src="./img/logo.png" alt="logo"></div>
+            <div class="header_info">
+                <div class="phone"><a href="tel:+380111111111">+38 011 111 11 11</a></div>
+                <div class="mail"><a href="mailto:mail@mail.mail">info@wavesboardshop.com</a></div>
+            </div>
+        </header>
+
+        <nav>
+            <p class="mobile_menu_btn">
+                <i>
+                    <img src="./img/icons/bars-solid.svg" alt="Menu" class="mobile_menu_img">
+                </i>
+            </p>
+            <ul class="menu">
+                <li class="nav_elem">Лонгборды
+                    <ul class="sub_menu">
+                        <li><a href="#">DH</a></li>
+                        <li><a href="#">Dance</a>
+                            <ul>
+                                <li><a href="">Loaded</a></li>
+                                <li><a href="">Bustin</a></li>
+                                <li><a href="">Rayne</a>
+                                    <ul class="sub_menu_lvl2">
+                                        <li><a href="">Bamboo</a></li>
+                                        <li><a href="">Carbon fiber</a></li>
+                                        <li><a href="">Maple</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Frestyle</a></li>
+                    </ul>
+                </li>
+                <li class="nav_elem">Деки
+                    <ul class="sub_menu">
+                        <li><a href="#">Top mount</a></li>
+                        <li><a href="#">Drop through</a></li>
+                        <li><a href="#">Круизеры</a></li>
+                        <li><a href="#">Пинтейлы</a></li>
+                    </ul>
+                </li>
+                <li class="nav_elem">Подвески
+                    <ul class="sub_menu">
+                        <li><a href="#">44"</a>
+                            <ul class="sub_menu_lvl2">
+                                <li><a href="#">Paris</a></li>
+                                <li><a href="#">Caliber</a></li>
+                                <li><a href="#">Bear</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">50"</a>
+                            <ul class="sub_menu_lvl2">
+                                <li><a href="#">Paris</a></li>
+                                <li><a href="#">Caliber</a></li>
+                                <li><a href="#">Bear</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav_elem">Колеса
+                    <ul class="sub_menu">
+                        <li><a href="#">Blood Orange</a></li>
+                        <li><a href="#">Orangatang</a></li>
+                        <li><a href="#">Bustin</a></li>
+                        <li><a href="#">Cloud Ride</a></li>
+                    </ul>
+                </li>
+                <li class="nav_elem">Аксесуары</li>
+            </ul>
+        </nav>
+
+        <H1>Waves boardshop</H1>
+
+        <picture><img src="./img/waves.jpg" alt="Picture"></picture>
+
+        <div class="galery">
+            <div class="galery_part"><a href=""><img src="./img/pic1.jpg" alt="Omakase"></a>
+                <p>Loaded Omakase</p>
+            </div>
+            <div class="galery_part"><a href=""><img src="./img/pic2.jpg" alt="Dervish"></a>
+                <p>Loaded Dervish</p>
+            </div>
+            <div class="galery_part"><a href=""><img src="./img/pic3.jpg" alt="Bahangra"></a>
+                <p>Loaded Bahangra</p>
+            </div>
+            <div class="galery_part"><a href=""><img src="./img/pic4.jpg" alt="Tarab"></a>
+                <p>Loaded Tarab</p>
+            </div>
+            <div class="galery_part"><a href=""><img src="./img/pic5.jpg" alt="Tarab"></a>
+                <p>Loaded Tan-Tien</p>
+            </div>
+            <div class="galery_part"><a href=""><img src="./img/pic6.jpg" alt="Tesseract"></a>
+                <p>Loaded Tesseract</p>
+            </div>
+        </div>
+        <!--galery -->
+
+
+        <div class="slider_container">
+            <h3 class="slider_name">Alternative Longboards decks designes</h3>
+            <div class="slider">
+                <input type="radio" name="r" id="r1" checked>
+                <input type="radio" name="r" id="r2">
+                <input type="radio" name="r" id="r3">
+                <input type="radio" name="r" id="r4">
+
+                <div class="slides">
+                    <div class="slide s1">
+                        <img src="./img/slide1.jpeg" alt="slide">
+                    </div>
+                    <div class="slide s2">
+                        <img src="./img/slide2.jpg" alt="slide">
+                    </div>
+                    <div class="slide s3">
+                        <img src="./img/slide3.jpeg" alt="slide">
+                    </div>
+                    <div class="slide s4">
+                        <img src="./img/slide4.jpg" alt="slide">
+                    </div>
+                </div>
+
+                <div class="slider_nav">
+                    <label for="r1" class="control c1"></label>
+                    <label for="r2" class="control c2"></label>
+                    <label for="r3" class="control c3"></label>
+                    <label for="r4" class="control c4"></label>
+                </div>
+            </div>
+        </div>
+
+        <!-- TODO: меню бургер-->
+
+        <form action="#">
+            <p>Оставьте коментарий о нашем сайте:</p>
+            <input type="email" class="input" placeholder="Ваш email">
+            <input type="text" class="input" placeholder="Ваш коментарий">
+            <button class="input input_btn">Отправить</button>
+        </form>
+
+        <footer>
+            <div class="copywrite">
+                <p>© Eugene 2019</p>
+            </div>
+
+            <div class="socials">
+                <a href="https://github.com/FrogRider" target="_blank"><i class="social_link" label="Github"> <img
+                            src="./img/icons/github-brands.svg" alt="git"> </i></a>
+                <a href="https://www.linkedin.com/in/eugene-grigor-a3b854182/" target="_blank" label="LinkedIn"><i
+                        class="social_link"><img src="./img/icons/linkedin-in-brands.svg" alt="linkedin"> </i></a>
+                <a href="https://t.me/e_grigor" target="_blank" label="Telegram"><i class="social_link"><img
+                            src="./img/icons/telegram-brands.svg" alt=""></i></a>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

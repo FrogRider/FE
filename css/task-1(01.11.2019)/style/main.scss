@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'bread_crumbs'; 
+@import 'radio';
+@import 'checkbox';
+@font-face {
+    font-family: Montserrat;
+    src: url(../font/Montserrat-Medium.ttf);
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+

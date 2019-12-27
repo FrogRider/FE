@@ -1,0 +1,211 @@
+.bread_crumbs {
+  width: 100%;
+  background: #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bread_crumbs .bread_crumb {
+  background: #1e8bc3;
+  margin-left: 53px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 1px;
+}
+
+.bread_crumbs .bread_crumb a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.bread_crumbs .bread_crumb:last-of-type {
+  background: #145d81;
+}
+
+.bread_crumbs .bread_crumb:last-of-type a {
+  color: tomato;
+}
+
+.bread_crumbs .bread_crumb:last-of-type:before {
+  color: #145d81;
+  background: #145d81;
+}
+
+.bread_crumbs .bread_crumb:last-of-type:after {
+  -webkit-clip-path: none;
+          clip-path: none;
+  background: #145d81;
+  color: #145d81;
+}
+
+.bread_crumbs .bread_crumb:first-of-type:before {
+  -webkit-clip-path: none;
+          clip-path: none;
+}
+
+.bread_crumb:after, .bread_crumb:before {
+  content: '.';
+  color: #1e8bc3;
+  background: #1e8bc3;
+  width: 10px;
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  padding: 10px;
+  position: absolute;
+  margin-right: 10px;
+  -webkit-transform: translateY(-25.6%);
+          transform: translateY(-25.6%);
+}
+
+.bread_crumb:before {
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%, 25% 50%);
+          clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%, 25% 50%);
+  margin-right: -10px;
+  margin-left: -30px;
+}
+
+.default_radio {
+  visibility: hidden;
+}
+
+.default_radio:checked + label:after {
+  background: green;
+}
+
+.default_radio:not(:checked) + label:after {
+  background: gray;
+}
+
+.label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.label:after {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  background: green;
+  border-radius: 50%;
+  margin-left: 7.5px;
+  margin-bottom: 0.5px;
+}
+
+.label:before {
+  position: absolute;
+  margin-right: 10px;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border: 3px solid green;
+  border-radius: 50%;
+  background: #f1f1f1;
+}
+
+.radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ios_checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.ios_checkbox .check_label {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 3px;
+  background: #2ecc71;
+  border: 1px solid gray;
+  border-radius: 42.5px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.ios_checkbox .default_checkbox {
+  display: none;
+}
+
+.ios_checkbox .default_checkbox:checked + label {
+  background: #f1f1f1;
+}
+
+.ios_checkbox .default_checkbox:checked + label:before {
+  margin-left: -42px;
+}
+
+.check_label:before {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  content: '';
+  width: 41px;
+  height: 41px;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid gray;
+  -webkit-transform: translateX(93%);
+          transform: translateX(93%);
+  margin-left: 2px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../font/Montserrat-Medium.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+}

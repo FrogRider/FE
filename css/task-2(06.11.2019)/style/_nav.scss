@@ -1,0 +1,81 @@
+@import '_colors';
+
+.mobile_menu_btn {
+    display: none;
+}
+
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background: $gray;
+    color: #fff;
+}
+
+nav {
+    position: sticky;
+    top: 0em;
+    z-index: 9;
+}
+
+.nav_elem {
+    display: block;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    cursor: pointer;
+    font-size: calc(1vw + .1vh + .5vmin);
+    transition: font-size 0.3s;
+
+    &:hover {
+        background: $grayDarker;
+    }
+
+    &:hover .sub_menu {
+        display: block;
+    }
+}
+
+.sub_menu {
+    position: absolute;
+    margin: 20px 0 0 -20px;
+    display: none;
+    border: 2px solid $grayDarker;
+
+    li {
+        position: relative;
+        background: $gray;
+        padding: 10px 20px;
+        min-width: 150px;
+        list-style-type: none;
+
+        &:hover {
+            background: $grayDarker;
+        }
+
+        &:hover ul {
+            display: block;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.sub_menu li ul, .sub_menu li ul li .sub_menu_lvl2{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    border: 2px solid $grayDarker;
+    display: none;
+}
+
+.sub_menu li:hover ul,
+.subMenu li ul, .sub_menu li ul li:hover .sub_menu_lvl2 {
+    display: block;
+}
+

@@ -1,0 +1,94 @@
+
+
+.left {
+
+  background-image: url('../img/bg_item.png');
+  background-size: contain;
+
+  & .grid {
+    width: 282px;
+    height: 277px;
+    background-color: #000; 
+    margin-left: 3.5px;
+    margin-top: 79px;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    // grid-gap: 2px;
+    align-content: space-around;
+    justify-content: space-between;
+
+    & .grid-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-image: url('../img/tile.png');
+      background-size: 100%;
+    
+    }
+  }
+
+  .cancel {
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/gear-btn.png');
+    background-size: contain;
+    position: absolute;
+    bottom: 13.5px;
+    right: 18px;
+    cursor: pointer;
+  }
+
+  .inputs {
+    height: 42px;
+    width: 170px;
+    position: absolute;
+    top: 25px;
+    // opacity: .5;
+
+    & .gold input,
+    & .max {
+      height: 50%;
+      width: 100%;
+      padding: 5px 0;
+      background: none;
+      border: none;
+      box-shadow: inset 0px 0px 0px 2px #fff;
+      outline: none;
+      text-align: center;
+      color: #fff
+    }
+
+    & .max {
+      position: absolute;
+      bottom: 0;
+      padding: 0;
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & .btn {
+      position: absolute;
+      left: 0;
+      width: 21px;
+      height: 21px;
+      background-image: url('../img/money.png');
+      background-size: contain;
+      cursor: pointer;
+    }
+
+    & .gold input {
+      width: calc(100% - 21px);
+      float: right;
+
+      
+    }
+
+    
+  }
+
+  
+}

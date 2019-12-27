@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../font/Montserrat-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+}
+
+body {
+  background-color: #f1f1f1;
+  color: tomato;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #000;
+  }
+}

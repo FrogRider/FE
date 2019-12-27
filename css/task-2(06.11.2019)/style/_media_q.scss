@@ -1,0 +1,37 @@
+@media screen and (max-width: 830px) {
+    .header_info {
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .phone, .mail {
+            width: 100%;
+        }
+    }
+
+    .galery .galery_part {
+        width: calc((100%/2) - 4%);
+    }
+
+    .wraper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .galery .galery_part {
+        width: 100%;
+        margin-top: 50px;
+
+        & a {
+            width: 100%;
+        }
+    }
+
+    footer .socials {
+        flex-direction: column;
+    }
+
+    .input {
+        width: 100%;
+    }
+}

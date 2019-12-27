@@ -1,0 +1,179 @@
+.right {
+  background-image: url('../img/bg_item-right.png');
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  // margin-top: 0;
+
+  .right_top,
+  .right_bottom {
+    width: 281px;
+    margin: 0 auto;
+    height: 50%;
+    margin-top: -50px;
+  }
+
+  .right_top {
+    width: 282px;
+    display: grid;
+    margin-top: -110px;
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 7px;
+    height: 44%;
+
+    .col1, .col2, .col3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+    }
+
+    .left_gloves, .right_shoes {
+      width: 100%;
+      height: 62.25px;
+      // background: #000;
+      background:   url('../img/gloves_in_box.png') no-repeat center;
+      background-size: 67px 65px;
+      filter: grayscale(80%);
+    }
+
+    .right_shoes {
+      background:   url('../img/shoes_in_box.png') no-repeat center;
+      background-size: 67px 65px;
+    }
+
+    .left_weapon_first,
+    .left_weapon_second,
+    .right_weapon_first,
+    .right_weapon_second {
+      background: url('../img/stick_weapon.png') no-repeat center;
+      background-size: 67px 95px;
+      width: 100%;
+      height: 53%;
+      position: absolute;
+      top: 22px;
+      & i{
+        position: absolute;
+        background: #000;
+        width: 33px;
+        height: 20px;
+        bottom: 100%;
+        background:   url('../img/selector_first.png');
+        background-size: cover;
+        &.second {
+          right: 0;
+          background:   url('../img/selector_second.png');
+          background-size: cover;
+        }
+      }
+    }
+
+    .weapon.disabled:before {
+      content: '';
+      background: red;
+      width: 100%;
+      height: 100%;
+      opacity: .3;
+      position: absolute;
+      top: 0;
+    }
+
+    .bottom_section {
+      width: 100%;
+      height: 37px;
+      // background: red;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .ring_first,
+      .ring_second {
+        height: 90%;
+        width: 33.3px;
+        background: #000;
+        background:   url('../img/blue_ring_in_box.png');
+        background-size: cover;
+      }
+
+      .belt {
+        height: 90%;
+        width: 60px;
+        // background: #000;
+        background:   url('../img/belt_in_box.png');
+        background-size: cover;
+      }
+    }
+
+    .helmet {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 61px;
+      height: 61px;
+      // height: 95px;
+      background:   url('../img/crown.png');
+        background-size: cover;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        transform: translateX(-100%);
+        background:   url('../img/triangle.png');
+        background-size: cover;
+      }
+
+      .necklace {
+        position: absolute;
+        width: 33px;
+        height: 33px;
+        right: 0;
+        bottom: 0;
+        transform: translateX(115%);
+        background:   url('../img/necklace.png');
+        background-size: cover;
+      }
+    }
+
+    .armor {
+      width: 61px;
+      height: 45%;
+      position: absolute;
+      top: 61px;
+      left: 50%;
+      transform: translateX(-50%); 
+      background:   url('../img/armor2.png');
+      background-size: cover;
+    }
+  }
+
+  .right_bottom {
+    height: 41.5%;
+    #right_grid {
+      width: 100%;
+      height: 100%;
+      margin-top: 18%;
+      display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(10, 1fr);
+        // grid-gap: 2px;
+        align-content: space-around;
+        justify-content: space-between;
+        background: #000;
+        
+
+      .grid-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-image: url('../img/tile.png');
+        background-size: 100%;
+      }
+    }
+  }
+}

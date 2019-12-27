@@ -1,0 +1,14 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: $darkBlue;
+  
+  & p{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-top: 2px dashed $light;
+  }
+}

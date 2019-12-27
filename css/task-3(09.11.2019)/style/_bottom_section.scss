@@ -1,0 +1,172 @@
+$green: #6de470;
+
+.container {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  position: relative;
+
+  & .name {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+    height: 10%;
+    display: flex;
+    align-items: center;
+
+    & .new {
+      font-family: MontserratLight;
+      position: absolute;
+      display: inline-block;
+      top: -15px;
+      right: 70px;
+      display: inline-block;
+      background: $green;
+      padding: 0 5px;
+      border-radius: 5px;
+      color: #fff;
+    }
+  }
+
+  &.collection {
+    color: black;
+    text-transform: uppercase;
+  }
+
+  .stars {
+    padding: 10px 0;
+    & i.inactive{
+      color: #ccc
+    }
+
+    & .fa-star:hover {
+      cursor: pointer;
+    }
+  }
+
+  .size {
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .sizes {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+
+    & input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+    }
+
+    & label {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    #r1:checked ~ #l1 {
+      background: tomato;
+      color: #fff;
+    }
+    #r2:checked ~ #l2 {
+      background: tomato;
+      color: #fff;
+    }
+    #r3:checked ~ #l3 {
+      background: tomato;
+      color: #fff;
+    }
+    #r4:checked ~ #l4 {
+      background: tomato;
+      color: #fff;
+    }
+    #r5:checked ~ #l5 {
+      background: tomato;
+      color: #fff;
+    }
+  }
+
+  & .color {
+    text-transform: uppercase;
+  }
+
+  & .colors {
+    & input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+    }
+
+    display: flex;
+    padding: 20px 0;
+
+    & .outer {
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+
+      & .inner {
+        display: block;
+        height: 20px;
+        width: 20px;
+        background: #000;
+        border-radius: inherit;
+      }
+
+      .red {
+        background: tomato;
+      }
+      .green {
+        background: $green;
+      }
+      .yellow {
+        background: orange;
+      }
+    }
+
+    #color_r1:checked ~ #color_l1 {
+      border: 2px solid tomato;
+    }
+    #color_r2:checked ~ #color_l2 {
+      border: 2px solid $green;
+    }
+    #color_r3:checked ~ #color_l3 {
+      border: 2px solid orange;
+    }
+
+    .price {
+      position: absolute;
+      background: $green;
+      font-family: MontserratLight;
+      color: #fff;
+      right: -10%;
+      bottom: 19%;
+      font-size: 2.5em;
+      padding: 0 20px;
+      border-radius: 10px;
+      box-shadow: -10px 20px 10px -10px rgba(15, 230, 85, 0.3);
+
+      & span {
+        font-weight: bold;
+        font-family: Montserrat;
+      }
+    }
+  }
+}
+
+.bottom {
+  border-radius: 0 0 35px 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

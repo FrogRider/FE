@@ -1,0 +1,29 @@
+@media screen and (max-width: 830px) {
+
+  .mobile_menu_btn {
+    display: block;
+
+    & i img.mobile_menu_img {
+      height: 2em;
+    }
+
+    // &:hover ~ .menu {
+    //   display: block;
+    // }
+  }
+  nav:hover .menu {
+    display: block;
+  }
+  .nav_elem:hover .sub_menu{
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+
+  nav {
+    width: 100%;
+    background: $gray;
+  }
+
+}
